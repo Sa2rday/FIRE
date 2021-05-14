@@ -66,36 +66,7 @@ MonoBehaviour:
   partsOption: {fileID: 8801423946754013768}
   nameOfConnectorsPoint: UpperPoint
   nameOfMainDetale: M9
---- !u!1 &8801423946622752575
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8801423946622752512}
-  m_Layer: 9
-  m_Name: AttachPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8801423946622752512
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8801423946622752575}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -18.16, y: 9.77, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8801423946754013775}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  mainPiece: {fileID: 0}
 --- !u!1 &8801423946662151272
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,6 +133,7 @@ MonoBehaviour:
   partsOption: {fileID: 8801423946754013768}
   nameOfConnectorsPoint: UpperPoint
   nameOfMainDetale: M9
+  mainPiece: {fileID: 0}
 --- !u!1 &8801423946754013767
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +172,6 @@ Transform:
   - {fileID: 8801423947090088002}
   - {fileID: 8801423946662151274}
   - {fileID: 8801423946524819868}
-  - {fileID: 8801423946622752512}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -346,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attachmentFlags: 84
-  attachmentOffset: {fileID: 8801423946622752512}
+  attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 1
   releaseVelocityTimeOffset: -0.011

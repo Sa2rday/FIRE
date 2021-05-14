@@ -8,6 +8,7 @@ TagManager:
   - FxTemporaire
   - M9
   - Target
+  - Magaz
   layers:
   - Default
   - TransparentFX

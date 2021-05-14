@@ -16,6 +16,7 @@ public class FireAction : MonoBehaviour
     public RaycastHit raycastHit;
     Interactable interactable;
     BodyOfWeapon bodyOfWeapon;
+    public int indexOfScence;
     void Start()
     {
         bodyOfWeapon = GetComponent<BodyOfWeapon>();
@@ -28,31 +29,36 @@ public class FireAction : MonoBehaviour
     {
         Debug.DrawRay(FirePoint.position, FirePoint.right * -100);
         bulletsIndicator.text = bulletsCount.ToString();
-        if(interactable.attachedToHand != null)
+        if (Application.levelCount == indexOfScence)
         {
-            SteamVR_Input_Sources source = interactable.attachedToHand.handType;
-            if (fireAct[source].stateDown)
+            if (interactable.attachedToHand != null)
             {
-                if (bulletsCount > 0 && bodyOfWeapon.wholeModel == true)
+                SteamVR_Input_Sources source = interactable.attachedToHand.handType;
+                if (fireAct[source].stateDown)
                 {
-                    Fire();
-                    if (raycastHit.collider != null)
+                    if (bulletsCount > 0 && bodyOfWeapon.wholeModel == true)
                     {
-                        Debug.Log(raycastHit.collider.gameObject.name);
-                        if (raycastHit.collider.gameObject.tag == "Target")
+                        Fire();
+                        if (raycastHit.collider != null)
                         {
-                            raycastHit.collider.gameObject.GetComponent<AudioSource>().Play();
-                            raycastHit.collider.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+                            Debug.Log(raycastHit.collider.gameObject.name);
+                            if (raycastHit.collider.gameObject.tag == "Target")
+                            {
+                                raycastHit.collider.gameObject.GetComponent<AudioSource>().Play();
+                                raycastHit.collider.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+                            }
                         }
                     }
-                }
-                else if (bulletsCount <= 0 && bodyOfWeapon.wholeModel == true)
-                {
-                    NoneAmmo();
+                    else if (bulletsCount <= 0 && bodyOfWeapon.wholeModel == true)
+                    {
+                        NoneAmmo();
+                    }
                 }
             }
+
+
         }
-      
+
     }
     void Fire()
     {

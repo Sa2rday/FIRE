@@ -31,6 +31,7 @@ public class PartsOption : MonoBehaviour
            wasBonded = true;
         else if (pointsConnector[0] == false || pointsConnector[1] == false) 
            wasBonded = false;
+        
 
         if(wasBonded == true)
         {
