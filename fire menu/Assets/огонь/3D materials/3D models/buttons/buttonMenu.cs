@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.SceneManager;
+using UnityEngine.SceneManagement;
 
 public class buttonMenu : MonoBehaviour
 {
@@ -37,7 +37,7 @@ public class buttonMenu : MonoBehaviour
         Options.SetActive(false);
         Menu.SetActive(true);
     }
-    public void PlayButton() 
+    public void PlayButton()
     {
         //SceneManager.LoadScene();           //SceneManager.LoadScene(name) загружает сцену 
     }
@@ -70,5 +70,13 @@ public class buttonMenu : MonoBehaviour
     {
         Pistols.SetActive(false);
         Angar.SetActive(true);
+    }
+    public void ButtonMenuAngar
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void ButtonBackAngar() 
+    {
+        SceneManager.LoadScene(0);
     }
 }
