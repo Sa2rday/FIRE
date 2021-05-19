@@ -723,7 +723,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 152738160}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1887982666}
+        m_MethodName: OptionsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &152738160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6060,8 +6071,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 90212fcc72d2c2648a6873729ef5317a, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 1887982666}
+        m_MethodName: ExitButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7356,12 +7367,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 90212fcc72d2c2648a6873729ef5317a, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 1887982666}
+        m_MethodName: AngarButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8682,6 +8693,7 @@ GameObject:
   - component: {fileID: 1887982664}
   - component: {fileID: 1887982663}
   - component: {fileID: 1887982662}
+  - component: {fileID: 1887982666}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -8771,6 +8783,21 @@ RectTransform:
   m_AnchoredPosition: {x: 7.44, y: 8.64}
   m_SizeDelta: {x: 11.47547, y: 9.253582}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1887982666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887982661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e206034a56657fd489052fa5ee45f76b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Angar: {fileID: 1611231138}
+  Menu: {fileID: 1326325627}
+  Options: {fileID: 152738157}
 --- !u!1001 &1893415676
 PrefabInstance:
   m_ObjectHideFlags: 0
