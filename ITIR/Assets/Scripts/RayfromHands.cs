@@ -11,6 +11,9 @@ public class RayfromHands : MonoBehaviour
     public SteamVR_Action_Boolean actBool;
     public string nameg;
     LineRenderer lR;
+    public LayerMask lM;
+
+    public Unbonding unb;
     void Start()
     {
         lR = GetComponent<LineRenderer>();
@@ -28,10 +31,13 @@ public class RayfromHands : MonoBehaviour
             ThrowRay();
             if (rayHit.collider != null)
             {
-                nameg = rayHit.collider.name;
+               
                 if (rayHit.collider.gameObject.GetComponent<Unbonding>())
                 {
+                    nameg = rayHit.collider.name;
+                    unb = rayHit.collider.gameObject.GetComponent<Unbonding>();
                     Unbond();
+                   
                 }
             }
         }
@@ -40,13 +46,13 @@ public class RayfromHands : MonoBehaviour
 
     void ThrowRay()
     {
-        Physics.Raycast(hands[0].transform.position, hands[0].transform.forward * 5, out rayHit);
+        Physics.Raycast(hands[0].transform.position, hands[0].transform.forward, out rayHit,5f,lM);
     }
 
     void Unbond()
     {
-        rayHit.collider.gameObject.GetComponent<Unbonding>().bonding.bonding.partsOption.pointsConnector[0] = false;
-        rayHit.collider.gameObject.GetComponent<Unbonding>().bonding.bonding.partsOption.pointsConnector[1] = false;
+       unb.wasunBonded = false;
+       
     }
  
    

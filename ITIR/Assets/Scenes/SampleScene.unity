@@ -173,6 +173,10 @@ MonoBehaviour:
     actionPath: /actions/default/in/UnBondAct
     needsReinit: 0
   nameg: 
+  lM:
+    serializedVersion: 2
+    m_Bits: 512
+  unb: {fileID: 0}
 --- !u!120 &2329153
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1643,6 +1647,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8186320505917391564}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1416075501
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416075494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.850804, y: 16.893091, z: 2.9132278}
+  m_Center: {x: -0.515502, y: -1.12, z: -0.000010058204}
 --- !u!1001 &1516368729
 PrefabInstance:
   m_ObjectHideFlags: 0

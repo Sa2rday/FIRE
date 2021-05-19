@@ -7,21 +7,23 @@ using Valve.VR.InteractionSystem;
 
 public class Unbonding : MonoBehaviour
 {
-    public Interactable interactable;
     public PartsOption partsOption;
-    public Bonding bonding;
+    public bool wasunBonded;
+    
     void Start()
     {
-        interactable = GetComponent<Interactable>();
+        wasunBonded = true;
+        
     }
 
    
     void Update()
     {
-        if(interactable.attachedToHand != null && partsOption.wasBonded == true)
+        if(wasunBonded == false && partsOption.wasBonded == true)
         {
-            bonding.bonding.partsOption.pointsConnector[0] = false;
-            bonding.bonding.partsOption.pointsConnector[1] = false; 
+            partsOption.pointsConnector[0] = false;
+            partsOption.pointsConnector[1] = false;
+            wasunBonded = true;
         }
     }
 }
