@@ -18,10 +18,10 @@ public class Unbonding : MonoBehaviour
    
     void Update()
     {
-        if(interactable.attachedToHand != null)
+        if(interactable.attachedToHand != null && partsOption.wasBonded == true)
         {
             bonding.bonding.partsOption.pointsConnector[0] = false;
-            bonding.bonding.partsOption.pointsConnector[1] = false;
+            bonding.bonding.partsOption.pointsConnector[1] = false; 
         }
     }
 }

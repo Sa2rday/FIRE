@@ -16,7 +16,6 @@ public class FireAction : MonoBehaviour
     public RaycastHit raycastHit;
     Interactable interactable;
     BodyOfWeapon bodyOfWeapon;
-    public int indexOfScence;
     void Start()
     {
         bodyOfWeapon = GetComponent<BodyOfWeapon>();
@@ -29,8 +28,8 @@ public class FireAction : MonoBehaviour
     {
         Debug.DrawRay(FirePoint.position, FirePoint.right * -100);
         bulletsIndicator.text = bulletsCount.ToString();
-        if (Application.levelCount == indexOfScence)
-        {
+      
+        
             if (interactable.attachedToHand != null)
             {
                 SteamVR_Input_Sources source = interactable.attachedToHand.handType;
@@ -57,7 +56,7 @@ public class FireAction : MonoBehaviour
             }
 
 
-        }
+        
 
     }
     void Fire()

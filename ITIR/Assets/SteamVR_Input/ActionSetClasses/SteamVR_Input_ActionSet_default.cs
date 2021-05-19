@@ -113,6 +113,14 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean UnBondAct
+        {
+            get
+            {
+                return SteamVR_Actions.default_UnBondAct;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get

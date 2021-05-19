@@ -40,10 +40,11 @@ public class PartsOption : MonoBehaviour
                 interactable.attachedToHand = null;
                 wasInteractableDisConected = true;
             }
-            Irigidbody.isKinematic = true;
+          
             transform.position = bonding.partsPosition.transform.position;
             transform.rotation = bonding.partsPosition.transform.rotation;
             bodyOfWeapon = bonding.pointsOfMainDetale.mainDetale.GetComponent<BodyOfWeapon>();
+            Irigidbody.isKinematic = true;
             if(checkingWasDid == false)
             {
                 for (int i = 0; i < bodyOfWeapon.checkOfConnecting.Length; i++)
@@ -85,11 +86,11 @@ public class PartsOption : MonoBehaviour
                 }
             }
             wasInteractableDisConected = false;
-            Irigidbody.isKinematic = false;
             checkingWasDid = false;
             bodyOfWeapon = null;
             transform.position = transform.position;
             transform.rotation = transform.rotation;
+            Irigidbody.isKinematic = false;
         }
        
     }
