@@ -14,6 +14,10 @@ public class RayfromHands : MonoBehaviour
     public LayerMask lM;
 
     public Unbonding unb;
+
+
+    public int indexOfSolussion;
+    public GameObject playerToDestoroy;
     void Start()
     {
         lR = GetComponent<LineRenderer>();
@@ -39,6 +43,10 @@ public class RayfromHands : MonoBehaviour
                     Unbond();
                    
                 }
+                else if (rayHit.collider.gameObject.GetComponent<ButtonM>())
+                {
+                    LoadScence();
+                }
             }
         }
 
@@ -53,6 +61,11 @@ public class RayfromHands : MonoBehaviour
     {
        unb.wasunBonded = false;
        
+    }
+    public void LoadScence()
+    {
+        Destroy(playerToDestoroy);
+        Application.LoadLevel(indexOfSolussion);
     }
  
    
