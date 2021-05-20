@@ -45,7 +45,14 @@ public class RayfromHands : MonoBehaviour
                 }
                 else if (rayHit.collider.gameObject.GetComponent<ButtonM>())
                 {
-                    LoadScence();
+                    if(rayHit.collider.gameObject.GetComponent<ButtonM>().indexOfLoadingScences == 0)
+                    {
+                        LoadScence(0);
+                    }else if(rayHit.collider.gameObject.GetComponent<ButtonM>().indexOfLoadingScences == 1)
+                    {
+                        Application.Quit();
+                    }
+                   
                 }
             }
         }
@@ -62,10 +69,10 @@ public class RayfromHands : MonoBehaviour
        unb.wasunBonded = false;
        
     }
-    public void LoadScence()
+    public void LoadScence(int i)
     {
         Destroy(playerToDestoroy);
-        Application.LoadLevel(indexOfSolussion);
+        Application.LoadLevel(i);
     }
  
    
