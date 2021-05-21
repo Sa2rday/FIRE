@@ -33,7 +33,7 @@ public class FireAction : MonoBehaviour
             if (interactable.attachedToHand != null)
             {
                 SteamVR_Input_Sources source = interactable.attachedToHand.handType;
-                if (fireAct[source].stateDown)
+                if (fireAct[source].stateDown || Input.GetKeyDown(KeyCode.Space))
                 {
                     if (bulletsCount > 0 && bodyOfWeapon.wholeModel == true)
                     {
